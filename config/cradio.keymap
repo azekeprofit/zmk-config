@@ -80,9 +80,10 @@
     combos {
         compatible = "zmk,combos";
 
-        cyrillic_toggle {
-            bindings = <&tog 1>;
+        go_cyrillic {
+            bindings = <&ru>;
             key-positions = <12 32>;
+            layers = <0>;
         };
 
         Ctrl_Z {
@@ -118,6 +119,28 @@
         enter {
             bindings = <&kp ENTER>;
             key-positions = <17 18>;
+        };
+
+        go_colemak {
+            bindings = <&en>;
+            key-positions = <12 32>;
+            layers = <1>;
+        };
+    };
+
+    macros {
+        ru: lang_switch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 1 &kp LC(LS(NUMBER_2))>;
+            label = "LANG_SWITCH";
+        };
+
+        en: en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &kp LC(LS(NUMBER_3))>;
+            label = "EN";
         };
     };
 
