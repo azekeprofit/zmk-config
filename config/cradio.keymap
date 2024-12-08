@@ -121,13 +121,13 @@
         };
 
         go_colemak {
-            bindings = <&en>;
+            bindings =  <&kp LC(LS(NUMBER_2))>, <&to 1>;
             key-positions = <12 33>;
             layers = <1>;
         };
 
         go_hanguk {
-            bindings = <&han>;
+            bindings =  <&kp LC(LS(NUMBER_3))>, <&to 1>;
             key-positions = <12 13 33>;
         };
     };
@@ -136,7 +136,7 @@
         ru: lang_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(NUMBER_2))>, <&macro_press>, <&to 1>;
+            bindings = <&kp LC(LS(NUMBER_2))>, <&to 1>;
 
             label = "LANG_SWITCH";
         };
