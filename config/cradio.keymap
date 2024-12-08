@@ -136,21 +136,24 @@
         ru: lang_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(NUMBER_2)) &to 1>;
+            bindings = <&kp LC(LS(NUMBER_2))>, <&macro_press>, <&to 1>;
+
             label = "LANG_SWITCH";
         };
 
         en: en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(NUMBER_3)) &to 0>;
+            bindings = <&kp LC(LS(NUMBER_3))>, <&macro_press>, <&to 0>;
+
             label = "EN";
         };
 
         han: han {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(NUMBER_3)) &to 1>;
+            bindings = <&kp LS(LC(NUMBER_3))>, <&macro_press>, <&to 1>;
+
             label = "HAN";
         };
     };
@@ -163,7 +166,7 @@
 &kp Q             &kp W        &kp F           &kp P           &kp B        &kp J            &kp L            &kp U         &kp Y         &kp SEMICOLON
 &ht LEFT_SHIFT A  &ht LCTRL R  &ht LEFT_WIN S  &ht LEFT_ALT T  &kp G        &kp K            &rht LEFT_ALT N  &rht RMETA E  &rht LCTRL I  &rht LEFT_SHIFT O
 &kp Z             &kp X        &kp C           &kp D           &kp V        &kp M            &kp H            &kp COMMA     &kp DOT       &kp ENTER
-                                               &kp LSHIFT      &lt 2 TAB    &lt 3 BACKSPACE  &kp SPACE
+                                               &kp ESCAPE      &lt 2 TAB    &lt 3 BACKSPACE  &kp SPACE
             >;
         };
 
@@ -196,9 +199,9 @@
 
         tri_layer {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG  &trans     &kp C_MUTE         &trans
-&kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp LEFT_ALT  &kp RMETA  &kp RIGHT_CONTROL  &kp RSHIFT
-&kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &trans        &to 0      &to 1              &bt BT_CLR_ALL
+&kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG    &trans     &kp C_MUTE         &trans
+&kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp LEFT_ALT    &kp RMETA  &kp RIGHT_CONTROL  &kp RSHIFT
+&kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &studio_unlock  &to 0      &to 1              &bt BT_CLR_ALL
                           &trans   &trans          &trans        &trans
             >;
         };
