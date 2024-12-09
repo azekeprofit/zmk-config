@@ -116,18 +116,18 @@
 
         go_cyrillic {
             bindings = <&ru>;
-            key-positions = <12 33>;
+            key-positions = <33 20>;
             layers = <0>;
         };
 
         go_hanguk {
             bindings = <&han>;
-            key-positions = <12 13 33>;
+            key-positions = <33 4>;
         };
 
         go_en {
             bindings = <&en>;
-            key-positions = <33 12>;
+            key-positions = <33 0>;
             layers = <1>;
         };
     };
@@ -136,14 +136,14 @@
         ru: lang_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(NUMBER_3)) &to 1 &to 5>;
+            bindings = <&kp LS(LC(NUMBER_3)) &to 1>;
             label = "LANG_SWITCH";
         };
 
         en: en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &kp LS(LC(NUMBER_2)) &tog 5>;
+            bindings = <&to 0 &kp LS(LC(NUMBER_2))>;
             label = "EN";
         };
 
