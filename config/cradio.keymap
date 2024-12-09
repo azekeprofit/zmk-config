@@ -125,18 +125,18 @@
         };
 
         zzzz {
-            bindings = <&to 1>;
+            bindings = <&ru>;
             key-positions = <9 19 29>;
         };
 
         xxxx {
-            bindings = <&to 0>;
+            bindings = <&ru>;
             key-positions = <8 18 28>;
             layers = <1>;
         };
 
         ccccc {
-            bindings = <&tog 1>;
+            bindings = <&han>;
             key-positions = <6 16 26>;
         };
     };
@@ -145,11 +145,7 @@
         ru: lang_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LC(LS(NUMBER_2))>,
-                <&macro_release>,
-                <&to 1>;
+            bindings = <&macro_press>, <&to 1>;
 
             label = "LANG_SWITCH";
         };
@@ -157,11 +153,7 @@
         en: en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LC(LS(NUMBER_3))>,
-                <&macro_release>,
-                <&to 0>;
+            bindings = <&macro_release>, <&to 0>;
 
             label = "EN";
         };
@@ -169,12 +161,7 @@
         han: han {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LC(LS(NUMBER_1))>,
-                <&macro_release>,
-                <&to 1>;
-
+            bindings = <&to 1>;
             label = "HAN";
         };
     };
