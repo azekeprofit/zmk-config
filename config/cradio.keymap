@@ -136,14 +136,23 @@
         ru: lang_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =  <&macro_press &to 1 &kp LC(LS(NUMBER_2))>;
+            bindings =
+                <&macro_press>,
+                <&kp LC(LS(NUMBER_2))>,
+                <&macro_release>,
+                <&to 1>;
+
             label = "LANG_SWITCH";
         };
 
         en: en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &to 0 &kp LC(LS(NUMBER_3))>;
+            bindings =
+                <&macro_press>,
+                <&kp LC(LS(NUMBER_3))>,
+                <&macro_release>,
+                <&to 0>;
 
             label = "EN";
         };
@@ -151,7 +160,12 @@
         han: han {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &to 2 &kp LC(LS(NUMBER_1))>;
+            bindings =
+                <&macro_press>,
+                <&kp LC(LS(NUMBER_1))>,
+                <&macro_release>,
+                <&to 1>;
+
             label = "HAN";
         };
     };
