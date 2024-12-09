@@ -115,13 +115,29 @@
         };
 
         go_cyrillic {
-              bindings = <&kp LG(SPACE) &tog 1>;
+            bindings = <&kp LG(SPACE) &tog 1>;
             key-positions = <12 33>;
         };
 
         go_hanguk {
             bindings = <&kp LC(LS(NUMBER_3)) &to 0>;
             key-positions = <12 13 33>;
+        };
+
+        zzzz {
+            bindings = <&to 1>;
+            key-positions = <9 19 29>;
+        };
+
+        xxxx {
+            bindings = <&to 0>;
+            key-positions = <8 18 28>;
+            layers = <1>;
+        };
+
+        ccccc {
+            bindings = <&tog 1>;
+            key-positions = <6 16 26>;
         };
     };
 
