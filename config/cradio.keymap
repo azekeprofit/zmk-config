@@ -114,9 +114,46 @@
             key-positions = <30 33>;
         };
 
-        qwerty {
-            bindings = <&tog 1>;
-            key-positions = <18 19>;
+        ru {
+            bindings = <&ruen 1 LC(LS(NUMBER_2))>;
+            key-positions = <8 9>;
+            layers = <0>;
+        };
+
+        en {
+            bindings = <&ruen 0 LC(LS(NUMBER_3))>;
+            key-positions = <9 8>;
+            layers = <1>;
+        };
+
+        han {
+            bindings = <&ruen 1 LC(LS(NUMBER_3))>;
+            key-positions = <9 8 7>;
+        };
+    };
+
+    macros {
+        semicolon: semicolon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp KP_NUMBER_0 &kp KP_NUMBER_5 &kp KP_NUMBER_9>,
+                <&macro_release &kp LALT>;
+            label = "SEMICOLON";
+        };
+
+        ruen: ruen {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_param_1to1>,
+                <&macro_press>,
+                <&to MACRO_PLACEHOLDER &macro_param_2to1>,
+                <&macro_press>,
+                <&kp MACRO_PLACEHOLDER>;
+
+            label = "RUEN";
         };
     };
 
@@ -143,7 +180,7 @@
 
         numbers_symbols {
             bindings = <
-&kp LEFT_PARENTHESIS              &kp NUMBER_1               &kp NUMBER_2           &kp NUMBER_3           &kp GRAVE               &kp SQT    &kp MINUS          &kp PLUS          &kp EQUAL             &trans
+&kp LEFT_PARENTHESIS              &kp NUMBER_1               &kp NUMBER_2           &kp NUMBER_3           &kp GRAVE               &kp SQT    &kp MINUS          &kp PLUS          &kp EQUAL             &semicolon
 &ht LEFT_SHIFT RIGHT_PARENTHESIS  &ht LEFT_CONTROL NUMBER_4  &ht LEFT_GUI NUMBER_5  &ht LEFT_ALT NUMBER_6  &kp N0                  &kp SQT    &rht LEFT_ALT N7   &rht LEFT_GUI N8  &rht LEFT_CONTROL N9  &rht LEFT_SHIFT SEMICOLON
 &trans                            &trans                     &trans                 &kp LEFT_BRACKET       &kp NON_US_BACKSLASH    &kp SLASH  &kp RIGHT_BRACKET  &trans            &trans                &trans
                                                                                     &trans                 &trans                  &trans     &tog 5
