@@ -64,6 +64,15 @@
             tapping-term-ms = <200>;
         };
 
+        russian_e: russian_e {
+            compatible = "zmk,behavior-tap-dance";
+            label = "russian_e";
+            #binding-cells = <0>;
+            bindings = <&kp Q>, <&kp SEMICOLON>;
+
+            tapping-term-ms = <200>;
+        };
+
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <300>;    // 40
@@ -148,11 +157,8 @@
             #binding-cells = <2>;
             bindings =
                 <&macro_param_1to1>,
-                <&macro_press>,
                 <&to MACRO_PLACEHOLDER &macro_param_2to1>,
-                <&macro_press>,
                 <&kp MACRO_PLACEHOLDER>;
-
             label = "RUEN";
         };
     };
@@ -171,7 +177,7 @@
 
         qwerty-cyrillic-hangul {
             bindings = <
-&kp Q   &kp W        &kp E       &kp R           &kp T     &kp Y   &kp U            &kp I        &kp O                &kp P
+&russian_e  &kp W        &kp E       &kp R           &kp T     &kp Y   &kp U            &kp I        &kp O                &kp P
 &trans  &ht LCTRL S  &ht LGUI D  &ht LEFT_ALT F  &kp G     &kp H   &rht LEFT_ALT J  &rht RGUI K  &rht LEFT_CONTROL L  &rht LEFT_SHIFT SEMICOLON
 &kp Z   &kp X        &kp C       &kp V           &kp B     &kp N   &softhard        &trans       &trans               &trans
                                  &trans          &trans    &trans  &trans
