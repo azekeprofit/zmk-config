@@ -68,7 +68,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "russian_e";
             #binding-cells = <0>;
-            bindings = <&kp Q>, <&kp SEMICOLON>;
+            bindings = <&kp Q>, <&kp SQT>;
 
             tapping-term-ms = <200>;
         };
