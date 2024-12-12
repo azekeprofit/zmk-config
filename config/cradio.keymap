@@ -145,7 +145,7 @@
         };
 
         han {
-            bindings = <&ruen 1 LC(LS(NUMBER_3))>;
+            bindings = <&ruen 1 LC(LS(NUMBER_3)) &kp LANG_HANGEUL>;
             key-positions = <9 8 7>;
         };
 
@@ -196,7 +196,7 @@
 
         qwerty-cyrillic-hangul {
             bindings = <
-&russian_e  &kp W        &kp E       &kp R           &kp T     &kp Y   &kp U            &kp I        &kp O                &kp P
+&russian_e  &kp W        &kp E       &kp R           &kp T     &kp Y   &kp U            &kp I        &kp O                russian_x
 &trans  &ht LCTRL S  &ht LGUI D  &ht LEFT_ALT F  &kp G     &kp H   &rht LEFT_ALT J  &rht RGUI K  &rht LEFT_CONTROL L  &rht LEFT_SHIFT SEMICOLON
 &kp Z   &kp X        &kp C       &kp V           &kp B     &kp N   &softhard        &trans       &trans               &trans
                                  &trans          &trans    &trans  &trans
