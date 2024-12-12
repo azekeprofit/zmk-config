@@ -182,7 +182,7 @@
         };
 
         han: han {
-            compatible = "zmk,behavior-macro-two-param";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                <&to 1 &kp LC(LS(NUMBER_3)) &kp LANG_HANGEUL>;
