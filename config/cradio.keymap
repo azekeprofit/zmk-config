@@ -73,6 +73,15 @@
             tapping-term-ms = <200>;
         };
 
+        russian_x: russian_x {
+            compatible = "zmk,behavior-tap-dance";
+            label = "russian_x";
+            #binding-cells = <0>;
+            bindings = <&kp P>, <&kp LEFT_BRACKET>;
+
+            tapping-term-ms = <200>;
+        };
+
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <300>;    // 40
@@ -139,6 +148,16 @@
             bindings = <&ruen 1 LC(LS(NUMBER_3))>;
             key-positions = <9 8 7>;
         };
+
+        hangeul {
+            bindings = <&kp LANG_HANGEUL>;
+            key-positions = <3 4>;
+        };
+
+        hanja {
+            bindings = <&kp LANG_HANJA>;
+            key-positions = <5 6>;
+        };
     };
 
     macros {
@@ -189,7 +208,7 @@
 &kp LEFT_PARENTHESIS              &kp NUMBER_1               &kp NUMBER_2           &kp NUMBER_3           &kp GRAVE               &kp SQT    &kp MINUS          &kp PLUS          &kp EQUAL             &semicolon
 &ht LEFT_SHIFT RIGHT_PARENTHESIS  &ht LEFT_CONTROL NUMBER_4  &ht LEFT_GUI NUMBER_5  &ht LEFT_ALT NUMBER_6  &kp N0                  &kp SQT    &rht LEFT_ALT N7   &rht LEFT_GUI N8  &rht LEFT_CONTROL N9  &rht LEFT_SHIFT SEMICOLON
 &trans                            &trans                     &trans                 &kp LEFT_BRACKET       &kp NON_US_BACKSLASH    &kp SLASH  &kp RIGHT_BRACKET  &trans            &trans                &trans
-                                                                                    &trans                 &trans                  &trans     &tog 5
+                                                                                    &trans                 &trans                  &trans     &trans
             >;
         };
 
@@ -207,7 +226,7 @@
 &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG    &trans     &kp C_MUTE         &trans
 &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp LEFT_ALT    &kp RMETA  &kp RIGHT_CONTROL  &kp RSHIFT
 &kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &studio_unlock  &trans     &trans             &bt BT_CLR_ALL
-                          &trans   &trans          &trans        &trans
+                          &trans   &trans          &trans        &tog 5
             >;
         };
 
