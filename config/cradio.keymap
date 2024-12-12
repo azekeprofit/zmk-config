@@ -145,7 +145,7 @@
         };
 
         han {
-            bindings = <&ruen 1 LC(LS(NUMBER_3)) &kp LANG_HANGEUL>;
+            bindings = <&ruen 1 LC(LS(NUMBER_3)), &kp LANG_HANGEUL>;
             key-positions = <9 8 7>;
         };
 
