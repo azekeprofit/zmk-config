@@ -82,6 +82,20 @@
             tapping-term-ms = <200>;
         };
 
+        russian_yu: russian_yu {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RUSSIAN_YU";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp LS(SLASH)>, <&kp PERIOD>;
+        };
+
+        russian_yo: russian_yo {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RUSSIAN_YO";
+            #binding-cells = <0>;
+            bindings = <&kp T>, <&kp GRAVE>;
+        };
+
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <300>;    // 40
@@ -134,29 +148,24 @@
 
         ru {
             bindings = <&ruen 1 LC(LS(NUMBER_2))>;
-            key-positions = <8 9>;
+            key-positions = <31 17>;
             layers = <0>;
         };
 
         en {
             bindings = <&ruen 0 LC(LS(NUMBER_3))>;
-            key-positions = <9 8>;
+            key-positions = <17 31>;
             layers = <1>;
         };
 
         hancombo {
             bindings = <&han>;
-            key-positions = <9 8 7>;
-        };
-
-        hangeul {
-            bindings = <&kp LANG_HANGEUL>;
-            key-positions = <3 4>;
+            key-positions = <31 18>;
         };
 
         hanja {
             bindings = <&kp LANG_HANJA>;
-            key-positions = <5 6>;
+            key-positions = <19 31>;
         };
     };
 
@@ -165,27 +174,27 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LALT>,
-                <&macro_tap &kp KP_NUMBER_0 &kp KP_NUMBER_5 &kp KP_NUMBER_9>,
-                <&macro_release &kp LALT>;
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_5 &kp KP_NUMBER_9>,
+                <&macro_release>,
+                <&kp LALT>;
+
             label = "SEMICOLON";
         };
 
         ruen: ruen {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings =
-                <&macro_param_1to1>,
-                <&to MACRO_PLACEHOLDER &macro_param_2to1>,
-                <&kp MACRO_PLACEHOLDER>;
+            bindings = <&macro_param_1to1 &to MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
             label = "RUEN";
         };
 
         han: han {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-               <&to 1 &kp LC(LS(NUMBER_3)) &kp LANG_HANGEUL>;
+            bindings = <&to 1 &kp LC(LS(NUMBER_3)) &kp LANG_HANGEUL>;
             label = "han";
         };
     };
@@ -204,10 +213,10 @@
 
         qwerty-cyrillic-hangul {
             bindings = <
-&russian_e  &kp W        &kp E       &kp R           &kp T     &kp Y   &kp U            &kp I        &kp O                &russian_x
-&trans  &ht LCTRL S  &ht LGUI D  &ht LEFT_ALT F  &kp G     &kp H   &rht LEFT_ALT J  &rht RGUI K  &rht LEFT_CONTROL L  &rht LEFT_SHIFT SEMICOLON
-&kp Z   &kp X        &kp C       &kp V           &kp B     &kp N   &softhard        &trans       &trans               &trans
-                                 &trans          &trans    &trans  &trans
+&russian_e  &kp W        &kp E       &kp R           &russian_yo    &kp Y   &kp U            &kp I        &kp O                &russian_x
+&trans      &ht LCTRL S  &ht LGUI D  &ht LEFT_ALT F  &kp G          &kp H   &rht LEFT_ALT J  &rht RGUI K  &rht LEFT_CONTROL L  &rht LEFT_SHIFT SEMICOLON
+&kp Z       &kp X        &kp C       &kp V           &kp B          &kp N   &softhard        &trans       &russian_yu          &trans
+                                     &trans          &trans         &trans  &trans
             >;
         };
 
@@ -215,7 +224,7 @@
             bindings = <
 &kp LEFT_PARENTHESIS              &kp NUMBER_1               &kp NUMBER_2           &kp NUMBER_3           &kp GRAVE               &kp SQT    &kp MINUS          &kp PLUS          &kp EQUAL             &semicolon
 &ht LEFT_SHIFT RIGHT_PARENTHESIS  &ht LEFT_CONTROL NUMBER_4  &ht LEFT_GUI NUMBER_5  &ht LEFT_ALT NUMBER_6  &kp N0                  &kp SQT    &rht LEFT_ALT N7   &rht LEFT_GUI N8  &rht LEFT_CONTROL N9  &rht LEFT_SHIFT SEMICOLON
-&trans                            &trans                     &trans                 &kp LEFT_BRACKET       &kp NON_US_BACKSLASH    &kp SLASH  &kp RIGHT_BRACKET  &trans            &trans                &trans
+&trans                            &kp LESS_THAN              &kp LEFT_BRACE         &kp LEFT_BRACKET       &kp NON_US_BACKSLASH    &kp SLASH  &kp RIGHT_BRACKET  &kp RIGHT_BRACE   &kp GREATER_THAN      &trans
                                                                                     &trans                 &trans                  &trans     &trans
             >;
         };
