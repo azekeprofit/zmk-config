@@ -79,7 +79,7 @@
             #binding-cells = <0>;
             bindings = <&kp P>, <&kp LEFT_BRACKET>, <&kp LS(NUMBER_4)>, <&kp LS(NUMBER_6)>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
         };
 
         russian_yu: russian_yu {
