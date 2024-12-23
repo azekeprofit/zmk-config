@@ -148,24 +148,24 @@
 
         ru {
             bindings = <&ruen 1 LC(LS(NUMBER_2))>;
-            key-positions = <8 9>;
+            key-positions = <17 13>;
             layers = <0>;
         };
 
         en {
             bindings = <&ruen 0 LC(LS(NUMBER_3))>;
-            key-positions = <8 9>;
+            key-positions = <17 13>;
             layers = <1>;
         };
 
         hancombo {
             bindings = <&han>;
-            key-positions = <9 8 7>;
+            key-positions = <17 18 31>;
         };
 
         hanja {
             bindings = <&kp LANG_HANJA>;
-            key-positions = <9 8 7 6>;
+            key-positions = <19 17 18 31>;
         };
     };
 
@@ -207,7 +207,7 @@
 &kp Q             &kp W        &kp F           &kp P           &kp B          &kp J      &kp L            &kp U         &kp Y         &kp SEMICOLON
 &ht LEFT_SHIFT A  &ht LCTRL R  &ht LEFT_WIN S  &ht LEFT_ALT T  &kp G          &kp K      &rht LEFT_ALT N  &rht RMETA E  &rht LCTRL I  &rht LEFT_SHIFT O
 &kp Z             &kp X        &kp C           &kp D           &kp V          &kp M      &kp H            &kp COMMA     &kp DOT       &kp ENTER
-                                               &kp ESCAPE      &lt 2 SPACE    &lt 3 TAB  &kp BACKSPACE
+                                          &ht LEFT_SHIFT  ESCAPE      &lt 2 SPACE    &lt 3 TAB  &kp BACKSPACE
             >;
         };
 
