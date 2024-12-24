@@ -148,13 +148,13 @@
 
         ru {
             bindings = <&ruen 1 LC(LS(NUMBER_2))>;
-            key-positions = <18 13>;
+            key-positions = <18 31>;
             layers = <0>;
         };
 
         en {
             bindings = <&ruen 0 LC(LS(NUMBER_3))>;
-            key-positions = <18 13>;
+            key-positions = <18 31>;
             layers = <1>;
         };
 
