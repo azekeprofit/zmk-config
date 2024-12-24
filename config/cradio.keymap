@@ -148,24 +148,24 @@
 
         ru {
             bindings = <&ruen 1 LC(LS(NUMBER_2))>;
-            key-positions = <18 31>;
+            key-positions = <16 9>;
             layers = <0>;
         };
 
         en {
             bindings = <&ruen 0 LC(LS(NUMBER_3))>;
-            key-positions = <18 31>;
+            key-positions = <9 16>;
             layers = <1>;
         };
 
         hancombo {
             bindings = <&han>;
-            key-positions = <19 18 31>;
+            key-positions = <9 8>;
         };
 
         hanja {
             bindings = <&kp LANG_HANJA>;
-            key-positions = <19 16 18 31>;
+            key-positions = <9 8 7>;
         };
     };
 
