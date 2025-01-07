@@ -55,47 +55,6 @@
             hold-trigger-key-positions = <0 1 2 3 4 14 24 23 13 12 22 21 11 10 20 30 19 18 17 16 31>;
         };
 
-        softhard: softhard {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SOFTHARD";
-            #binding-cells = <0>;
-            bindings = <&kp M>, <&kp RIGHT_BRACKET>;
-
-            tapping-term-ms = <200>;
-        };
-
-        russian_e: russian_e {
-            compatible = "zmk,behavior-tap-dance";
-            label = "russian_e";
-            #binding-cells = <0>;
-            bindings = <&kp Q>, <&kp SQT>;
-
-            tapping-term-ms = <200>;
-        };
-
-        russian_x: russian_x {
-            compatible = "zmk,behavior-tap-dance";
-            label = "russian_x";
-            #binding-cells = <0>;
-            bindings = <&kp P>, <&kp LEFT_BRACKET>, <&kp LS(NUMBER_4)>, <&kp LS(NUMBER_6)>;
-
-            tapping-term-ms = <300>;
-        };
-
-        russian_yu: russian_yu {
-            compatible = "zmk,behavior-tap-dance";
-            label = "RUSSIAN_YU";
-            #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp LS(SLASH)>, <&kp PERIOD>;
-        };
-
-        russian_yo: russian_yo {
-            compatible = "zmk,behavior-tap-dance";
-            label = "RUSSIAN_YO";
-            #binding-cells = <0>;
-            bindings = <&kp T>, <&kp GRAVE>;
-        };
-
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <300>;    // 40
@@ -167,6 +126,56 @@
             bindings = <&kp LANG_HANJA>;
             key-positions = <9 8 7>;
         };
+
+
+
+        russian_eh {
+            bindings = <&kp SQT>;
+            key-positions = <0 29>;
+            layers = <1>;
+        };
+
+        hard_sign {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <26 20>;
+            layers = <1>;
+        };
+
+        russian_dot {
+            bindings = <&kp SLASH>;
+            key-positions = <20 28>;
+            layers = <1>;
+        };
+
+        russian_comma {
+            bindings = <&kp LS(SLASH)>;
+            key-positions = <20 27>;
+            layers = <1>;
+        };
+
+        russian_x {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <20 9>;
+            layers = <1>;
+        };
+
+        russian_colon {
+            bindings = <&kp LS(NUMBER_4)>;
+            key-positions = <20 28 21>;
+            layers = <1>;
+        };
+
+        russian_semicolon {
+            bindings = <&kp LS(NUMBER_6)>;
+            key-positions = <20 27 21>;
+            layers = <1>;
+        };
+
+        russian_question {
+            bindings = <&kp LS(NUMBER_7)>;
+            key-positions = <20 25>;
+            layers = <1>;
+        };
     };
 
     macros {
@@ -207,15 +216,15 @@
 &kp Q             &kp W        &kp F           &kp P           &kp B          &kp J      &kp L            &kp U         &kp Y         &kp SEMICOLON
 &ht LEFT_SHIFT A  &ht LCTRL R  &ht LEFT_WIN S  &ht LEFT_ALT T  &kp G          &kp K      &rht LEFT_ALT N  &rht RMETA E  &rht LCTRL I  &rht LEFT_SHIFT O
 &kp Z             &kp X        &kp C           &kp D           &kp V          &kp M      &kp H            &kp COMMA     &kp DOT       &kp ENTER
-                                          &ht LEFT_SHIFT  ESCAPE      &lt 2 SPACE    &lt 3 TAB  &kp BACKSPACE
+                                              &ht LEFT_SHIFT  ESCAPE          &lt 2 SPACE    &lt 3 TAB  &kp BACKSPACE
             >;
         };
 
         qwerty-cyrillic-hangul {
             bindings = <
-&russian_e  &kp W        &kp E       &kp R           &russian_yo    &kp Y   &kp U            &kp I        &kp O                &russian_x
+&trans      &kp W        &kp E       &kp R           &kp T          &kp Y   &kp U            &kp I        &kp O                &kp P
 &trans      &ht LCTRL S  &ht LGUI D  &ht LEFT_ALT F  &kp G          &kp H   &rht LEFT_ALT J  &rht RGUI K  &rht LEFT_CONTROL L  &rht LEFT_SHIFT SEMICOLON
-&kp Z       &kp X        &kp C       &kp V           &kp B          &kp N   &softhard        &trans       &russian_yu          &trans
+&kp Z       &kp X        &kp C       &kp V           &kp B          &kp N   &kp M            &trans       &trans               &trans
                                      &trans          &trans         &trans  &trans
             >;
         };
