@@ -111,6 +111,11 @@
             layers = <0>;
         };
 
+        kaz {
+            bindings = <&ruen 1 LC(LS(NUMBER_4))>;
+            key-positions = <16 9 8>;
+        };
+
         en {
             bindings = <&ruen 0 LC(LS(NUMBER_3))>;
             key-positions = <9 16>;
@@ -120,6 +125,13 @@
         hancombo {
             bindings = <&han>;
             key-positions = <9 7>;
+            layers = <0>;
+        };
+
+        enhancombo {
+            bindings = <&ruen 0 LC(LS(NUMBER_3))>;
+            key-positions = <9 7>;
+            layers = <1>;
         };
 
         hanja {
@@ -183,19 +195,6 @@
     };
 
     macros {
-        semicolon: semicolon {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_0 &kp KP_NUMBER_5 &kp KP_NUMBER_9>,
-                <&macro_release>,
-                <&kp LALT>;
-
-            label = "SEMICOLON";
-        };
 
         ruen: ruen {
             compatible = "zmk,behavior-macro-two-param";
