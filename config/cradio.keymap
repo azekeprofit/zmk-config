@@ -113,7 +113,7 @@
 
         kaz {
             bindings = <&ruen 1 LC(LS(NUMBER_4))>;
-            key-positions = <16 9 8>;
+            key-positions = <25 17>;
         };
 
         en {
@@ -123,13 +123,13 @@
         };
 
         hancombo {
-            bindings = <&han>;
+            bindings = <&han 1>;
             key-positions = <9 7>;
             layers = <0>;
         };
 
         enhancombo {
-            bindings = <&ruen 0 LC(LS(NUMBER_3))>;
+            bindings = <&han 0>;
             key-positions = <9 7>;
             layers = <1>;
         };
@@ -205,8 +205,8 @@
 
         han: han {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 1 &kp LC(LS(NUMBER_3)) &kp LANG_HANGEUL>;
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &to MACRO_PLACEHOLDER &kp LC(LS(NUMBER_3)) &kp LANG_HANGEUL>;
             label = "han";
         };
     };
