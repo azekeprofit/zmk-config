@@ -165,13 +165,13 @@
 
         russian_x {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <9 8>;
+            key-positions = <8 9>;
             layers = <1>;
         };
 
         russian_colon {
             bindings = <&kp LS(NUMBER_4)>;
-            key-positions = <28 29 27>;
+            key-positions = <28 27 29>;
             layers = <1>;
         };
 
