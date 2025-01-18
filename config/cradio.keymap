@@ -107,48 +107,48 @@
 
         ru {
             bindings = <&ruen 1 LC(LS(NUMBER_2))>;
-            key-positions = <16 9>;
+            key-positions = <9 16>;
             layers = <0>;
         };
 
         kaz {
-            bindings = <&ruen 1 LC(LS(NUMBER_4))>;
-            key-positions = <25 17>;
+            bindings = <&ruen 5 LC(LS(NUMBER_4))>;
+            key-positions = <17 25>;
         };
 
         en {
             bindings = <&ruen 0 LC(LS(NUMBER_3))>;
             key-positions = <9 16>;
-            layers = <1>;
+            layers = <1 5>;
         };
 
         hancombo {
             bindings = <&han 1>;
-            key-positions = <9 7>;
+            key-positions = <7 9>;
             layers = <0>;
         };
 
         enhancombo {
             bindings = <&han 0>;
-            key-positions = <9 7>;
+            key-positions = <7 9>;
             layers = <1>;
         };
 
         hanja {
             bindings = <&kp LANG_HANJA>;
-            key-positions = <9 8 7>;
+            key-positions = <8 7 9>;
         };
 
         russian_eh {
             bindings = <&kp SQT>;
             key-positions = <0 1>;
-            layers = <1>;
+            layers = <1 5>;
         };
 
         hard_sign {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <26 25>;
-            layers = <1>;
+            layers = <1 5>;
         };
 
         russian_dot {
@@ -157,16 +157,28 @@
             layers = <1>;
         };
 
+        kazakh_dot {
+            bindings = <&kp N7>;
+            key-positions = <28 29>;
+            layers = <5>;
+        };
+
         russian_comma {
             bindings = <&kp LS(SLASH)>;
             key-positions = <27 26>;
             layers = <1>;
         };
 
+        kazakh_comma {
+            bindings = <&kp N6>;
+            key-positions = <27 26>;
+            layers = <5>;
+        };
+
         russian_x {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <8 9>;
-            layers = <1>;
+            layers = <1 5>;
         };
 
         russian_colon {
@@ -175,16 +187,34 @@
             layers = <1>;
         };
 
+        kazakh_colon {
+            bindings = <&kp LS(NUMBER_7)>;
+            key-positions = <28 27 29>;
+            layers = <5>;
+        };
+
         russian_semicolon {
             bindings = <&kp LS(NUMBER_6)>;
             key-positions = <27 28>;
             layers = <1>;
         };
 
+        kazakh_semicolon {
+            bindings = <&kp LS(NUMBER_6)>;
+            key-positions = <27 28>;
+            layers = <5>;
+        };
+
         russian_question {
             bindings = <&kp LS(NUMBER_7)>;
             key-positions = <25 27>;
             layers = <1>;
+        };
+
+        kazakh_question {
+            bindings = <&kp LS(NON_US_BACKSLASH)>;
+            key-positions = <25 27>;
+            layers = <5>;
         };
 
         russian_yo {
@@ -219,16 +249,16 @@
 &kp Q             &kp W        &kp F           &kp P           &kp B          &kp J      &kp L            &kp U         &kp Y         &kp SEMICOLON
 &ht LEFT_SHIFT A  &ht LCTRL R  &ht LEFT_WIN S  &ht LEFT_ALT T  &kp G          &kp K      &rht LEFT_ALT N  &rht RMETA E  &rht LCTRL I  &rht LEFT_SHIFT O
 &kp Z             &kp X        &kp C           &kp D           &kp V          &kp M      &kp H            &kp COMMA     &kp DOT       &kp ENTER
-                                              &ht LEFT_SHIFT  ESCAPE          &lt 2 SPACE    &lt 3 TAB  &kp BACKSPACE
+                                  &ht LEFT_SHIFT ESCAPE  &lt 2 SPACE          &lt 3 TAB  &kp BACKSPACE
             >;
         };
 
-        qwerty-cyrillic-hangul {
+        qwerty-hangul {
             bindings = <
 &trans      &kp W        &kp E       &kp R           &kp T          &kp Y   &kp U            &kp I        &kp O                &kp P
 &trans      &ht LCTRL S  &ht LGUI D  &ht LEFT_ALT F  &kp G          &kp H   &rht LEFT_ALT J  &rht RGUI K  &rht LEFT_CONTROL L  &rht LEFT_SHIFT SEMICOLON
 &kp Z       &kp X        &kp C       &kp V           &kp B          &kp N   &kp M            &trans       &trans               &trans
-                                     &trans          &trans         &trans  &trans
+                                     &trans          &trans        &trans  &trans
             >;
         };
 
@@ -256,6 +286,24 @@
 &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp LEFT_ALT    &kp RMETA  &kp RIGHT_CONTROL  &kp RSHIFT
 &kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &studio_unlock  &trans     &trans             &bt BT_CLR_ALL
                           &trans   &trans          &trans        &tog 5
+            >;
+        };
+
+        kazakh {
+            bindings = <
+&trans      &kp W        &kp E       &kp R           &kp T          &kp Y   &kp U            &kp I        &kp O                &kp P
+&trans      &ht LCTRL S  &ht LGUI D  &ht LEFT_ALT F  &kp G          &kp H   &rht LEFT_ALT J  &rht RGUI K  &rht LEFT_CONTROL L  &rht LEFT_SHIFT SEMICOLON
+&kp Z       &kp X        &kp C       &kp V           &kp B          &kp N   &kp M            &trans       &trans               &trans
+                                     &trans          &lt 6 SPACE    &trans  &trans
+            >;
+        };
+
+        numbers_symbols_kz {
+            bindings = <
+&kp GRAVE              &kp KP_N1               &kp KP_N2           &kp KP_N3              &kp GRAVE        &kp LS(N1)    &kp KP_SUBTRACT     &kp KP_PLUS         &kp KP_EQUAL      &kp AMPERSAND
+&ht LEFT_SHIFT LS(GRAVE)  &ht LEFT_CONTROL KP_N4  &ht LEFT_GUI KP_N5  &ht LEFT_ALT KP_N6  &kp KP_N0        &kp KP_MULTIPLE   &rht LEFT_ALT KP_N7   &rht LEFT_GUI KP_N8  &rht LEFT_CONTROL KP_N9  &rht LEFT_SHIFT SEMICOLON
+&trans                            &kp LESS_THAN              &kp LEFT_BRACE         &kp LEFT_BRACKET       &kp NON_US_BACKSLASH    &kp SLASH  &kp RIGHT_BRACKET  &kp RIGHT_BRACE   &kp GREATER_THAN      &trans
+                                                                                    &trans                 &trans                  &trans     &trans
             >;
         };
 
