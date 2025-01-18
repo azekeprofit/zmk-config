@@ -63,7 +63,7 @@
 
         msc {
             acceleration-exponent = <0>;      // 0
-            time-to-max-speed-ms = <40>;      // 500
+            time-to-max-speed-ms = <40>;      // 500р
             delay-ms = <0>;                   // 10
         };
     };
@@ -72,8 +72,13 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <RIG LEF>;
-            then-layer = <TRI>;
+            if-layers = <2 3>;
+            then-layer = <4>;
+        };
+
+        tri_kz {
+            if-layers = <6 3>;
+            then-layer = <4>;
         };
     };
 
@@ -254,6 +259,12 @@
             layers = <5>;
         };
 
+        kazakh_soft_o {
+            bindings = <&kp MINUS>;
+            key-positions = <28 19>;
+            layers = <5>;
+        };
+
         kazakh_hard_u {
             bindings = <&kp N9>;
             key-positions = <7 16>;
@@ -263,12 +274,6 @@
         kazakh_hard_k {
             bindings = <&kp N0>;
             key-positions = <15 16>;
-            layers = <5>;
-        };
-
-        kazakh_soft_o {
-            bindings = <&kp MINUS>;
-            key-positions = <19 28>;
             layers = <5>;
         };
 
