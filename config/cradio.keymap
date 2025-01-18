@@ -300,8 +300,8 @@
 
         numbers_symbols_kz {
             bindings = <
-&kp GRAVE              &kp KP_N1               &kp KP_N2           &kp KP_N3              &kp GRAVE        &kp LS(N1)    &kp KP_SUBTRACT     &kp KP_PLUS         &kp KP_EQUAL      &kp AMPERSAND
-&ht LEFT_SHIFT TILDE  &ht LEFT_CONTROL KP_N4  &ht LEFT_GUI KP_N5  &ht LEFT_ALT KP_N6  &kp KP_N0        &kp KP_MULTIPLE   &rht LEFT_ALT KP_N7   &rht LEFT_GUI KP_N8  &rht LEFT_CONTROL KP_N9  &rht LEFT_SHIFT SEMICOLON
+&kp GRAVE              &kp KP_N1               &kp KP_N2           &kp KP_N3              &kp GRAVE        &kp EXCLAMATION    &kp KP_SUBTRACT     &kp KP_PLUS         &kp KP_EQUAL      &kp AMPERSAND
+&ht LEFT_SHIFT RIGHT_PARENTHESIS  &ht LEFT_CONTROL NUMBER_4  &ht LEFT_GUI NUMBER_5  &ht LEFT_ALT NUMBER_6  &kp N0           &kp STAR          &rht LEFT_ALT N7      &rht LEFT_GUI N8     &rht LEFT_CONTROL N9     &rht LEFT_SHIFT SEMICOLON
 &trans                            &kp LESS_THAN              &kp LEFT_BRACE         &kp LEFT_BRACKET       &kp NON_US_BACKSLASH    &kp SLASH  &kp RIGHT_BRACKET  &kp RIGHT_BRACE   &kp GREATER_THAN      &trans
                                                                                     &trans                 &trans                  &trans     &trans
             >;
