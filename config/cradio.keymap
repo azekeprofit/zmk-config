@@ -136,7 +136,7 @@
 
         hanja {
             bindings = <&kp LANG_HANJA>;
-            key-positions = <7 8 9>;
+            key-positions = <9 18>;
             layers = <1>;
         };
 
@@ -184,37 +184,37 @@
 
         russian_colon {
             bindings = <&kp LS(NUMBER_4)>;
-            key-positions = <29 27 28>;
+            key-positions = <28 17>;
             layers = <1>;
         };
 
         kazakh_colon {
             bindings = <&kp LS(NUMBER_7)>;
-            key-positions = <27 29 28>;
+            key-positions = <28 17>;
             layers = <5>;
         };
 
         russian_semicolon {
-            bindings = <&kp LS(NUMBER_4)>;
+            bindings = <&kp LS(NUMBER_6)>;
             key-positions = <27 28>;
             layers = <1>;
         };
 
         kazakh_semicolon {
             bindings = <&kp LS(NUMBER_6)>;
-            key-positions = <28 27>;
+            key-positions = <27 28>;
             layers = <5>;
         };
 
         russian_question {
             bindings = <&kp LS(NUMBER_7)>;
-            key-positions = <25 27>;
+            key-positions = <25 16>;
             layers = <1>;
         };
 
         kazakh_question {
             bindings = <&kp QUESTION>;
-            key-positions = <27 25>;
+            key-positions = <25 16>;
             layers = <5>;
         };
 
@@ -244,6 +244,9 @@
 
         kazakh_soft_g {
             bindings = <&kp N5>;
+
+            ун
+
             key-positions = <13 14>;
             layers = <5>;
         };
