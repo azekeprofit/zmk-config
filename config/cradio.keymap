@@ -194,6 +194,12 @@
             layers = <5>;
         };
 
+        kz_n {
+            bindings = <&kp N4>;
+            key-positions = <16 17>;
+            layers = <5>;
+        };
+
         ru_colon {
             bindings = <&kp LS(NUMBER_6)>;
             key-positions = <28 17>;
@@ -239,12 +245,6 @@
         kz_soft_i {
             bindings = <&kp N3>;
             key-positions = <18 19>;
-            layers = <5>;
-        };
-
-        kz_n {
-            bindings = <&kp N4>;
-            key-positions = <16 17>;
             layers = <5>;
         };
 
