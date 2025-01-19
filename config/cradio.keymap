@@ -157,13 +157,6 @@
             layers = <1 5>;
         };
 
-        kz_semicolon {
-            bindings = <&kp LS(NUMBER_6)>;
-            key-positions = <27 28>;
-            layers = <5>;
-        };
-
-
         kz_soft_o {
             bindings = <&kp MINUS>;
             key-positions = <28 19>;
@@ -194,12 +187,6 @@
             layers = <1>;
         };
 
-        kz_colon {
-            bindings = <&kp LS(NUMBER_7)>;
-            key-positions = <28 17>;
-            layers = <5>;
-        };
-
         ru_semicolon {
             bindings = <&kp LS(NUMBER_6)>;
             key-positions = <27 28>;
@@ -210,12 +197,6 @@
             bindings = <&kp LS(NUMBER_7)>;
             key-positions = <25 16>;
             layers = <1>;
-        };
-
-        kz_question {
-            bindings = <&kp QUESTION>;
-            key-positions = <25 16>;
-            layers = <5>;
         };
 
         ru_yo {
@@ -323,7 +304,7 @@
 
         numbers_symbols_kz {
             bindings = <
-&kp GRAVE              &kp KP_N1               &kp KP_N2           &kp KP_N3              &kp GRAVE        &kp N1    &kp KP_SUBTRACT     &kp KP_PLUS         &kp KP_EQUAL      &kp AMPERSAND
+&kp GRAVE              &kp KP_N1               &kp KP_N2           &kp KP_N3              &kp GRAVE        &kp N1    &kp KP_SUBTRACT     &kp KP_PLUS         &kp LS(NUMBER_6)      &kp AMPERSAND
 &ht LEFT_SHIFT LS(GRAVE)          &ht LEFT_CONTROL KP_N4     &ht LEFT_GUI KP_N5     &ht LEFT_ALT KP_N6     &kp KP_N0        &kp KP_MULTIPLY   &rht LEFT_ALT KP_N7   &rht LEFT_GUI KP_N8  &rht LEFT_CONTROL KP_N9  &rht LEFT_SHIFT SEMICOLON
 &trans                            &kp LESS_THAN              &kp LEFT_BRACE         &kp LEFT_BRACKET       &kp NON_US_BACKSLASH    &kp SLASH  &kp RIGHT_BRACKET  &kp RIGHT_BRACE   &kp GREATER_THAN      &trans
                                                                                     &trans                 &trans                  &trans     &trans
