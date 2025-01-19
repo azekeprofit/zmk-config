@@ -127,24 +127,6 @@
             layers = <1 5>;
         };
 
-        hancombo {
-            bindings = <&han 1>;
-            key-positions = <7 9>;
-            layers = <0>;
-        };
-
-        enhancombo {
-            bindings = <&han 0>;
-            key-positions = <7 9>;
-            layers = <1>;
-        };
-
-        hanja {
-            bindings = <&kp LANG_HANJA>;
-            key-positions = <9 18>;
-            layers = <1>;
-        };
-
         russian_eh {
             bindings = <&kp SQT>;
             key-positions = <0 1>;
