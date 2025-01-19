@@ -127,7 +127,7 @@
             layers = <1 5>;
         };
 
-        russian_eh {
+        ru_eh {
             bindings = <&kp SQT>;
             key-positions = <0 1>;
             layers = <1 5>;
@@ -139,127 +139,128 @@
             layers = <1 5>;
         };
 
-        russian_dot {
+        ru_dot {
             bindings = <&kp SLASH>;
             key-positions = <28 29>;
             layers = <1>;
         };
 
-        kazakh_dot {
+        kz_dot {
             bindings = <&kp N7>;
             key-positions = <28 29>;
             layers = <5>;
         };
 
-        russian_comma {
+        ru_comma {
             bindings = <&kp LS(SLASH)>;
             key-positions = <27 26>;
             layers = <1>;
         };
 
-        kazakh_comma {
+        kz_comma {
             bindings = <&kp N6>;
             key-positions = <27 26>;
             layers = <5>;
         };
 
-        russian_x {
+        ru_x {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <8 9>;
             layers = <1 5>;
         };
 
-        russian_colon {
-            bindings = <&kp LS(NUMBER_4)>;
-            key-positions = <28 17>;
-            layers = <1>;
-        };
-
-        kazakh_colon {
-            bindings = <&kp LS(NUMBER_7)>;
-            key-positions = <28 17>;
-            layers = <5>;
-        };
-
-        russian_semicolon {
-            bindings = <&kp LS(NUMBER_6)>;
-            key-positions = <27 28>;
-            layers = <1>;
-        };
-
-        kazakh_semicolon {
+        kz_semicolon {
             bindings = <&kp LS(NUMBER_6)>;
             key-positions = <27 28>;
             layers = <5>;
         };
 
-        russian_question {
-            bindings = <&kp LS(NUMBER_7)>;
-            key-positions = <25 16>;
-            layers = <1>;
-        };
 
-        kazakh_question {
-            bindings = <&kp QUESTION>;
-            key-positions = <25 16>;
-            layers = <5>;
-        };
-
-        russian_yo {
-            bindings = <&kp GRAVE>;
-            key-positions = <3 4>;
-            layers = <1>;
-        };
-
-        kazakh_soft_a {
-            bindings = <&kp N2>;
-            key-positions = <10 11>;
-            layers = <5>;
-        };
-
-        kazakh_soft_i {
-            bindings = <&kp N3>;
-            key-positions = <18 19>;
-            layers = <5>;
-        };
-
-        kazakh_n {
-            bindings = <&kp N4>;
-            key-positions = <16 17>;
-            layers = <5>;
-        };
-
-        kazakh_soft_g {
-            bindings = <&kp N5>;
-            key-positions = <13 14>;
-            layers = <5>;
-        };
-
-        kazakh_soft_u {
-            bindings = <&kp N8>;
-            key-positions = <7 18>;
-            layers = <5>;
-        };
-
-        kazakh_soft_o {
+        kz_soft_o {
             bindings = <&kp MINUS>;
             key-positions = <28 19>;
             layers = <5>;
         };
 
-        kazakh_hard_u {
+        kz_hard_u {
             bindings = <&kp N9>;
             key-positions = <7 16>;
             layers = <5>;
         };
 
-        kazakh_hard_k {
+        kz_hard_k {
             bindings = <&kp N0>;
             key-positions = <15 16>;
             layers = <5>;
         };
 
-        kazakh_hard_h {
+        ru_colon {
+            bindings = <&kp LS(NUMBER_6)>;
+            key-positions = <28 17>;
+            layers = <1>;
+        };
+
+        kz_colon {
+            bindings = <&kp LS(NUMBER_7)>;
+            key-positions = <28 17>;
+            layers = <5>;
+        };
+
+        ru_semicolon {
+            bindings = <&kp LS(NUMBER_6)>;
+            key-positions = <27 28>;
+            layers = <1>;
+        };
+
+        ru_question {
+            bindings = <&kp LS(NUMBER_7)>;
+            key-positions = <25 16>;
+            layers = <1>;
+        };
+
+        kz_question {
+            bindings = <&kp QUESTION>;
+            key-positions = <25 16>;
+            layers = <5>;
+        };
+
+        ru_yo {
+            bindings = <&kp GRAVE>;
+            key-positions = <3 4>;
+            layers = <1>;
+        };
+
+        kz_soft_a {
+            bindings = <&kp N2>;
+            key-positions = <10 11>;
+            layers = <5>;
+        };
+
+        kz_soft_i {
+            bindings = <&kp N3>;
+            key-positions = <18 19>;
+            layers = <5>;
+        };
+
+        kz_n {
+            bindings = <&kp N4>;
+            key-positions = <16 17>;
+            layers = <5>;
+        };
+
+        kz_soft_g {
+            bindings = <&kp N5>;
+            key-positions = <13 14>;
+            layers = <5>;
+        };
+
+        kz_soft_u {
+            bindings = <&kp N8>;
+            key-positions = <7 18>;
+            layers = <5>;
+        };
+
+        kz_hard_h {
             bindings = <&kp EQUAL>;
             key-positions = <15 26>;
             layers = <5>;
@@ -267,7 +268,6 @@
     };
 
     macros {
-
         ruen: ruen {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
