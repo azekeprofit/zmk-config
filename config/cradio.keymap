@@ -366,14 +366,5 @@
                                                                                     &trans                 &trans                  &trans     &trans
             >;
         };
-
-        mouse {
-            bindings = <
-&tog MOUSE  &trans  &trans  &trans  &trans    &trans     &trans          &mmv MOVE_UP    &trans           &tog MOUSE
-&trans      &trans  &trans  &trans  &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
-&trans      &trans  &trans  &trans  &trans    &trans     &mkp MB4        &mkp MCLK       &mkp MB5         &trans
-                            &trans  &trans    &mkp LCLK  &mkp RCLK
-            >;
-        };
     };
 };
