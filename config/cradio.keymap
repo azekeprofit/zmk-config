@@ -66,7 +66,7 @@
 
         tri_kz {
             if-layers = <6 7>;
-            then-layer = <4>;
+            then-layer = <8>;
         };
     };
 
@@ -100,8 +100,7 @@
 
         ru {
             bindings = <&ruen 1 LC(LS(NUMBER_2))>;
-            key-positions = <9 16>;
-            layers = <0>;
+            key-positions = <9 17>;
         };
 
         kaz {
@@ -112,7 +111,6 @@
         en {
             bindings = <&ruen 0 LC(LS(NUMBER_3))>;
             key-positions = <9 16>;
-            layers = <1 5>;
         };
 
         ru_eh {
@@ -190,12 +188,6 @@
         ru_semicolon {
             bindings = <&kp LS(NUMBER_4)>;
             key-positions = <27 28>;
-            layers = <1>;
-        };
-
-        ru_question {
-            bindings = <&kp LS(NUMBER_7)>;
-            key-positions = <25 16>;
             layers = <1>;
         };
 
@@ -289,7 +281,7 @@
 &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG    &trans     &kp C_MUTE         &trans
 &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp LEFT_ALT    &kp RMETA  &kp RIGHT_CONTROL  &kp RSHIFT
 &kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &studio_unlock  &trans     &trans             &bt BT_CLR_ALL
-                          &trans   &trans          &trans        &tog 5
+                          &trans   &trans          &trans        &trans
             >;
         };
 
@@ -317,6 +309,16 @@
 &kp LSHIFT  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &default_report    &kp DEL  &kp LEFT  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN
 &trans      &trans     &trans        &trans        &bootloader        &trans   &trans    &trans        &trans     &trans
                                      &trans        &trans             &trans   &trans
+            >;
+        };
+
+
+        tri_layer_kz {
+            bindings = <
+&kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG    &trans     &kp C_MUTE         &trans
+&kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp LEFT_ALT    &kp RMETA  &kp RIGHT_CONTROL  &kp RSHIFT
+&kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &studio_unlock  &trans     &trans             &bt BT_CLR_ALL
+                          &trans   &trans          &trans       &trans
             >;
         };
     };
