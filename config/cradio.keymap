@@ -41,12 +41,7 @@
 
             hold-trigger-key-positions = <5 7 8 9 6 15 16 18 19 17 27 28 29 26 25 33 10 11 12 13 32>;
         };
-        kazakh_h: kazakh_h {
-            compatible = "zmk,behavior-tap-dance";
-            label = "KAZAKH_H";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET>, <&kp EQUAL>;
-        };
+
         rht: rht {
             compatible = "zmk,behavior-hold-tap";
             label = "RHT";
@@ -157,7 +152,7 @@
         ru_x {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <8 9>;
-            layers = <1 5>;
+            layers = <1>;
         };
 
         ru_colon {
@@ -176,6 +171,49 @@
             bindings = <&kp GRAVE>;
             key-positions = <3 4>;
             layers = <1>;
+        };
+
+
+        kz_hard_h {
+            bindings = <&kp EQUAL>;
+            key-positions = <15 16>;
+            layers = <5>;
+        };
+
+        kz_f {
+            bindings = <&kp A>;
+            key-positions = <8 9>;
+            layers = <5>;
+        };
+
+        kz_v {
+            bindings = <&kp D>;
+            key-positions = <18 19>;
+            layers = <5>;
+        };
+
+        kz_soft {
+            bindings = <&kp M>;
+            key-positions = <26 32>;
+            layers = <5>;
+        };
+
+        kz_ch {
+            bindings = <&kp X>;
+            key-positions = <13 14>;
+            layers = <5>;
+        };
+
+        kz_ts {
+            bindings = <&kp W>;
+            key-positions = <3 4>;
+            layers = <5>;
+        };
+
+        kz_yu {
+            bindings = <&kp PERIOD>;
+            key-positions = <1 2>;
+            layers = <5>;
         };
     };
 
@@ -239,7 +277,7 @@
         kazakh {
             bindings = <
 &kp N8            &kp E        &kp N5      &kp L           &kp K          &kp N      &kp N0           &kp NUMBER_3  &kp U                   &kp N9
-&kp LEFT_BRACKET  &ht LCTRL G  &ht LGUI S  &ht LEFT_ALT F  &kp Y          &kp H      &rht LEFT_ALT T  &rht RGUI R   &rht LEFT_CONTROL SEMI  &rht LEFT_SHIFT MINUS
+&ht LEFT_SHIFT LEFT_BRACKET  &ht LCTRL G  &ht LGUI S  &ht LEFT_ALT F  &kp Y          &kp H      &rht LEFT_ALT T  &rht RGUI R   &rht LEFT_CONTROL SEMI  &rht LEFT_SHIFT MINUS
 &kp N2            &kp J        &kp C       &kp B           &kp COMMA      &kp V      &kp N4           &kp I         &kp P                   &trans
                                            &trans          &lt 6 SPACE    &lt 7 TAB  &kp BACKSPACE
             >;
