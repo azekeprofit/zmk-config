@@ -155,30 +155,6 @@
             layers = <1 5>;
         };
 
-        kz_soft_o {
-            bindings = <&kp MINUS>;
-            key-positions = <28 19>;
-            layers = <5>;
-        };
-
-        kz_hard_u {
-            bindings = <&kp N9>;
-            key-positions = <7 16>;
-            layers = <5>;
-        };
-
-        kz_hard_k {
-            bindings = <&kp N0>;
-            key-positions = <15 16>;
-            layers = <5>;
-        };
-
-        kz_n {
-            bindings = <&kp N4>;
-            key-positions = <16 17>;
-            layers = <5>;
-        };
-
         ru_colon {
             bindings = <&kp LS(NUMBER_6)>;
             key-positions = <28 17>;
@@ -195,36 +171,6 @@
             bindings = <&kp GRAVE>;
             key-positions = <3 4>;
             layers = <1>;
-        };
-
-        kz_soft_a {
-            bindings = <&kp N2>;
-            key-positions = <10 11>;
-            layers = <5>;
-        };
-
-        kz_soft_i {
-            bindings = <&kp N3>;
-            key-positions = <18 19>;
-            layers = <5>;
-        };
-
-        kz_soft_g {
-            bindings = <&kp N5>;
-            key-positions = <13 14>;
-            layers = <5>;
-        };
-
-        kz_soft_u {
-            bindings = <&kp N8>;
-            key-positions = <7 18>;
-            layers = <5>;
-        };
-
-        kz_hard_h {
-            bindings = <&kp EQUAL>;
-            key-positions = <15 26>;
-            layers = <5>;
         };
     };
 
@@ -285,12 +231,13 @@
             >;
         };
 
+
         kazakh {
             bindings = <
-&trans      &kp W        &kp E       &kp R           &kp T          &kp Y   &kp U            &kp I        &kp O                &kp P
-&trans      &ht LCTRL S  &ht LGUI D  &ht LEFT_ALT F  &kp G          &kp H   &rht LEFT_ALT J  &rht RGUI K  &rht LEFT_CONTROL L  &rht LEFT_SHIFT SEMICOLON
-&kp Z       &kp X        &kp C       &kp V           &kp B          &kp N   &kp M            &trans       &trans               &trans
-                                     &trans          &lt 6 SPACE    &lt 7 TAB  &kp BACKSPACE
+&kp N8            &kp E        &kp N5      &kp L           &kp K            &kp N      &kp N0           &kp NUMBER_3  &kp U                   &kp N9
+&kp LEFT_BRACKET  &ht LCTRL G  &ht LGUI S  &ht LEFT_ALT F  &kp Y            &kp H      &rht LEFT_ALT T  &rht RGUI R   &rht LEFT_CONTROL SEMI  &rht LEFT_SHIFT MINUS
+&kp N2            &kp J        &kp C       &kp B           &kp LESS_THAN    &kp V      &kp N4           &kp I         &kp A                   &kp P
+                                           &trans          &lt 6 SPACE      &lt 7 TAB  &kp BACKSPACE
             >;
         };
 
