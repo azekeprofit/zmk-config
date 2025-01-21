@@ -197,9 +197,10 @@
             key-positions = <16 25>;
             layers = <5>;
         };
+
         kz_ya {
             bindings = <&kp Z>;
-            key-positions = <20 21>;
+            key-positions = <10 11>;
             layers = <5>;
         };
 
