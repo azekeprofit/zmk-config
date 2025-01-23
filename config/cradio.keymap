@@ -54,6 +54,13 @@
 
             hold-trigger-key-positions = <0 1 2 3 4 14 24 23 13 12 22 21 11 10 20 30 19 18 17 16 31>;
         };
+
+        kz_i_y: kz_i_y {
+            compatible = "zmk,behavior-tap-dance";
+            label = "KZ_I_Y";
+            #binding-cells = <0>;
+            bindings = <&kp B>, <&kp Q>;
+        };
     };
 
     conditional_layers {
@@ -282,10 +289,10 @@
 
         kazakh {
             bindings = <
-&kp N8            &kp E        &kp N5      &kp L           &kp K          &kp N      &kp N0           &kp NUMBER_3  &kp U                   &kp N9
-&ht LEFT_SHIFT LEFT_BRACKET  &ht LCTRL G  &ht LGUI S  &ht LEFT_ALT F  &kp Y          &kp H      &rht LEFT_ALT T  &rht RGUI R   &rht LEFT_CONTROL SEMI  &rht LEFT_SHIFT MINUS
-&kp N2            &kp J        &kp C       &kp B           &kp COMMA      &kp V      &kp N4           &kp I         &kp P                   &trans
-                                           &trans          &lt 6 SPACE    &lt 7 TAB  &kp BACKSPACE
+&kp N8                       &kp N9       &kp E        &kp R           &kp T          &kp Y      &kp U            &kp N5       &kp U                &kp N3
+&ht LEFT_SHIFT LEFT_BRACKET  &ht LCTRL S  &ht LGUI N2  &ht LEFT_ALT F  &kp G          &kp H      &rht LEFT_ALT J  &rht RGUI K  &rht LEFT_CONTROL L  &rht LEFT_SHIFT SEMI
+&kp MINUS                    &kp N0       &kp C        &kp V           &kz_i_y        &kp N      &kp I            &kp COMMA    &kp N4               &trans
+                                                       &trans          &lt 6 SPACE    &lt 7 TAB  &kp BACKSPACE
             >;
         };
 
