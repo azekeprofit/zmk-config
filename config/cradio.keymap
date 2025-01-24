@@ -219,12 +219,6 @@
 
         kz_ts {
             bindings = <&kp W>;
-            key-positions = <3 4>;
-            layers = <5>;
-        };
-
-        kz_yu {
-            bindings = <&kp PERIOD>;
             key-positions = <1 2>;
             layers = <5>;
         };
