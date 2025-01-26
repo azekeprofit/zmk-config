@@ -54,13 +54,6 @@
 
             hold-trigger-key-positions = <0 1 2 3 4 14 24 23 13 12 22 21 11 10 20 30 19 18 17 16 31>;
         };
-
-        kz_i_y: kz_i_y {
-            compatible = "zmk,behavior-tap-dance";
-            label = "KZ_I_Y";
-            #binding-cells = <0>;
-            bindings = <&kp B>, <&kp Q>;
-        };
     };
 
     conditional_layers {
@@ -227,6 +220,23 @@
             key-positions = <24 13>;
             layers = <5>;
         };
+
+        han {
+            bindings = <&han 1>;
+            key-positions = <7 9>;
+            layers = <0>;
+        };
+
+        enhan {
+            bindings = <&han 0>;
+            key-positions = <7 9>;
+            layers = <1>;
+        };
+
+  hanja {
+            bindings = <&kp LANG_HANJA>;
+            key-positions = <8 7 9>;
+        };
     };
 
     macros {
@@ -235,6 +245,13 @@
             #binding-cells = <2>;
             bindings = <&macro_param_1to1 &to MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
             label = "RUEN";
+        };
+
+        han: han {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &to MACRO_PLACEHOLDER &kp LC(LS(NUMBER_3)) &kp LANG_HANGEUL>;
+            label = "han";
         };
     };
 
@@ -288,9 +305,9 @@
 
         kazakh {
             bindings = <
-&kp N8             &kp N9            &kp E        &kp R           &kp T          &kp Y      &kp NUMBER_3     &kp NUMBER_4  &kp U                &kp P
+&kp N8             &kp N9            &kp E        &kp R           &kp T          &kp Y      &kp NUMBER_3     &kp NUMBER_4  &kp U                &kp I
 &ht LEFT_SHIFT N0  &ht LCTRL S       &ht LGUI N5  &ht LEFT_ALT F  &kp G          &kp H      &rht LEFT_ALT J  &rht RGUI K   &rht LEFT_CONTROL L  &rht LEFT_SHIFT SEMI
-&kp MINUS          &kp LEFT_BRACKET  &kp C        &kp V           &kp B          &kp N      &kp I            &kp COMMA     &kp N2               &trans
+&kp MINUS          &kp LEFT_BRACKET  &kp C        &kp V           &kp B          &kp N      &kp P            &kp COMMA     &kp N2               &trans
                                                   &trans          &lt 6 SPACE    &lt 7 TAB  &kp BACKSPACE
             >;
         };
