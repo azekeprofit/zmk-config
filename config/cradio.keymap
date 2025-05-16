@@ -4,10 +4,10 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 2500  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define MAC 0
@@ -34,8 +34,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <0>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
 
@@ -47,8 +47,8 @@
             label = "RHT";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <0>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
 
@@ -173,7 +173,6 @@
             layers = <1>;
         };
 
-
         kz_hard_h {
             bindings = <&kp EQUAL>;
             key-positions = <15 16>;
@@ -215,6 +214,7 @@
             key-positions = <1 2>;
             layers = <5>;
         };
+
         kz_iy {
             bindings = <&kp Q>;
             key-positions = <24 13>;
@@ -223,17 +223,17 @@
 
         han {
             bindings = <&han 1>;
-            key-positions = <7 9>;
+            key-positions = <7 5>;
             layers = <0>;
         };
 
         enhan {
             bindings = <&han 0>;
-            key-positions = <7 9>;
+            key-positions = <7 5>;
             layers = <1>;
         };
 
-  hanja {
+        hanja {
             bindings = <&kp LANG_HANJA>;
             key-positions = <8 7 9>;
         };
@@ -260,19 +260,19 @@
 
         colemak {
             bindings = <
-&kp Q             &kp W        &kp F           &kp P           &kp B          &kp J      &kp L            &kp U         &kp Y         &kp SEMICOLON
-&ht LEFT_SHIFT A  &ht LCTRL R  &ht LEFT_WIN S  &ht LEFT_ALT T  &kp G          &kp K      &rht LEFT_ALT N  &rht RMETA E  &rht LCTRL I  &rht LEFT_SHIFT O
-&kp Z             &kp X        &kp C           &kp D           &kp V          &kp M      &kp H            &kp COMMA     &kp DOT       &kp ENTER
-                                  &ht LEFT_SHIFT ESCAPE  &lt 2 SPACE          &lt 3 TAB  &kp BACKSPACE
+&kp Q             &kp W        &kp F           &kp P                  &kp B          &kp J      &kp L            &kp U         &kp Y         &kp SEMICOLON
+&ht LEFT_SHIFT A  &ht LCTRL R  &ht LEFT_WIN S  &ht LEFT_ALT T         &kp G          &kp K      &rht LEFT_ALT N  &rht RMETA E  &rht LCTRL I  &rht LEFT_SHIFT O
+&kp Z             &kp X        &kp C           &kp D                  &kp V          &kp M      &kp H            &kp COMMA     &kp DOT       &kp ENTER
+                                               &ht LEFT_SHIFT ESCAPE  &lt 2 SPACE    &lt 3 TAB  &kp BACKSPACE
             >;
         };
 
         qwerty-hangul {
             bindings = <
-&trans      &kp W        &kp E       &kp R           &kp T          &kp Y   &kp U            &kp I        &kp O                &kp P
-&trans      &ht LCTRL S  &ht LGUI D  &ht LEFT_ALT F  &kp G          &kp H   &rht LEFT_ALT J  &rht RGUI K  &rht LEFT_CONTROL L  &rht LEFT_SHIFT SEMICOLON
-&kp Z       &kp X        &kp C       &kp V           &kp B          &kp N   &kp M            &trans       &trans               &trans
-                                     &trans          &trans        &trans  &trans
+&trans  &kp W        &kp E       &kp R           &kp T     &kp Y   &kp U            &kp I        &kp O                &kp P
+&trans  &ht LCTRL S  &ht LGUI D  &ht LEFT_ALT F  &kp G     &kp H   &rht LEFT_ALT J  &rht RGUI K  &rht LEFT_CONTROL L  &rht LEFT_SHIFT SEMICOLON
+&kp Z   &kp X        &kp C       &kp V           &kp B     &kp N   &kp M            &trans       &trans               &trans
+                                 &trans          &trans    &trans  &trans
             >;
         };
 
@@ -312,13 +312,12 @@
             >;
         };
 
-
         numbers_symbols_kz {
             bindings = <
-&kp GRAVE              &kp KP_N1               &kp KP_N2           &kp KP_N3              &kp GRAVE        &kp N1    &kp KP_SUBTRACT     &kp KP_PLUS         &kp LS(NUMBER_6)      &kp AMPERSAND
-&ht LEFT_SHIFT LS(GRAVE)          &ht LEFT_CONTROL KP_N4     &ht LEFT_GUI KP_N5     &ht LEFT_ALT KP_N6     &kp KP_N0        &kp KP_MULTIPLY   &rht LEFT_ALT KP_N7   &rht LEFT_GUI KP_N8  &rht LEFT_CONTROL KP_N9  &rht LEFT_SHIFT SEMICOLON
-&trans                            &kp LESS_THAN              &kp LEFT_BRACE         &kp LEFT_BRACKET       &kp NON_US_BACKSLASH    &kp SLASH  &kp RIGHT_BRACKET  &kp RIGHT_BRACE   &kp GREATER_THAN      &trans
-                                                                                    &trans                 &trans                  &trans     &trans
+&kp GRAVE                 &kp KP_N1               &kp KP_N2           &kp KP_N3           &kp GRAVE               &kp N1           &kp KP_SUBTRACT      &kp KP_PLUS          &kp LS(NUMBER_6)         &kp AMPERSAND
+&ht LEFT_SHIFT LS(GRAVE)  &ht LEFT_CONTROL KP_N4  &ht LEFT_GUI KP_N5  &ht LEFT_ALT KP_N6  &kp KP_N0               &kp KP_MULTIPLY  &rht LEFT_ALT KP_N7  &rht LEFT_GUI KP_N8  &rht LEFT_CONTROL KP_N9  &rht LEFT_SHIFT SEMICOLON
+&trans                    &kp LESS_THAN           &kp LEFT_BRACE      &kp LEFT_BRACKET    &kp NON_US_BACKSLASH    &kp SLASH        &kp RIGHT_BRACKET    &kp RIGHT_BRACE      &kp GREATER_THAN         &trans
+                                                                      &trans              &trans                  &trans           &trans
             >;
         };
 
@@ -331,13 +330,12 @@
             >;
         };
 
-
         tri_layer_kz {
             bindings = <
 &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG    &trans     &kp C_MUTE         &trans
 &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp LEFT_ALT    &kp RMETA  &kp RIGHT_CONTROL  &kp RSHIFT
 &kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &studio_unlock  &trans     &trans             &bt BT_CLR_ALL
-                          &trans   &trans          &trans       &trans
+                          &trans   &trans          &trans        &trans
             >;
         };
     };
