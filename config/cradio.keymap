@@ -293,7 +293,7 @@
                                      &trans        &trans             &trans   &trans
             >;
         };
-tststtstrstrrs
+
         tri_layer {
             bindings = <
 &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG    &trans     &kp C_MUTE         &trans
