@@ -235,7 +235,7 @@
 
         hanja {
             bindings = <&kp LANG_HANJA>;
-            key-positions = <8 7 9>;
+            key-positions = <5 6 7>;
         };
     };
 
@@ -252,6 +252,13 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &to MACRO_PLACEHOLDER &kp LC(LS(NUMBER_3)) &kp LANG_HANGEUL>;
             label = "han";
+        };
+
+        mouseless: mouseless {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sl 9 &kp F19>;
+            label = "MOUSELESS";
         };
     };
 
@@ -287,10 +294,10 @@
 
         navigation {
             bindings = <
-&kp ESCAPE  &trans     &trans        &trans        &trans             &kp INS  &kp HOME  &kp UP_ARROW  &kp END    &kp PAGE_UP
-&kp LSHIFT  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &default_report    &kp DEL  &kp LEFT  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN
-&trans      &trans     &trans        &trans        &bootloader        &kp F19  &trans    &trans        &trans     &trans
-                                     &trans        &trans             &trans   &trans
+&kp ESCAPE  &trans     &trans        &trans        &trans             &kp INS     &kp HOME  &kp UP_ARROW  &kp END    &kp PAGE_UP
+&kp LSHIFT  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &default_report    &kp DEL     &kp LEFT  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN
+&trans      &trans     &trans        &trans        &bootloader        &mouseless  &trans    &trans        &trans     &trans
+                                     &trans        &trans             &trans      &trans
             >;
         };
 
@@ -336,6 +343,15 @@
 &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp LEFT_ALT    &kp RMETA  &kp RIGHT_CONTROL  &kp RSHIFT
 &kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &studio_unlock  &trans     &trans             &bt BT_CLR_ALL
                           &trans   &trans          &trans        &trans
+            >;
+        };
+
+        colemak_sticky_mouseless {
+            bindings = <
+&kp Q  &kp W  &kp F  &kp P                  &kp B          &kp J      &kp L             &kp U         &kp Y         &kp SEMICOLON
+&kp A  &kp R  &kp S  &kp T                  &kp G          &kp K      &rht RIGHT_ALT N  &rht RMETA E  &rht RCTRL I  &rht RIGHT_SHIFT O
+&kp Z  &kp X  &kp C  &kp D                  &kp V          &kp M      &kp H             &kp COMMA     &kp DOT       &kp ENTER
+                     &ht LEFT_SHIFT ESCAPE  &lt 2 SPACE    &lt 3 TAB  &kp BACKSPACE
             >;
         };
     };
