@@ -257,7 +257,7 @@
         mouseless: mouseless {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl 9 &kp F19>;
+            bindings = <&kp F19 &sl 9>;
             label = "MOUSELESS";
         };
     };
