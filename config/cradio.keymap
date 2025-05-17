@@ -33,7 +33,7 @@
             label = "hold_tap";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
+            flavor = "tap-preferred";
             tapping-term-ms = <300>;
             quick-tap-ms = <150>;
             global-quick-tap;
@@ -314,7 +314,7 @@
 
         numbers_symbols_kz {
             bindings = <
-&kp GRAVE                 &kp KP_N1               &kp KP_N2           &kp KP_N3           &trans                  &kp N1           &kp KP_SUBTRACT      &kp KP_PLUS          &kp KP_EQUAL             &kp LS(DOT)
+&kp GRAVE                 &kp KP_N1               &kp KP_N2           &kp KP_N3           &trans                  &kp N1           &kp KP_SUBTRACT      &kp KP_PLUS          &kp KP_EQUAL             &kp LS(SLASH)
 &ht LEFT_SHIFT LS(GRAVE)  &ht LEFT_CONTROL KP_N4  &ht LEFT_GUI KP_N5  &ht LEFT_ALT KP_N6  &kp KP_N0               &kp KP_MULTIPLY  &rht LEFT_ALT KP_N7  &rht LEFT_GUI KP_N8  &rht LEFT_CONTROL KP_N9  &rht LEFT_SHIFT SEMICOLON
 &trans                    &trans                  &trans              &trans              &kp NON_US_BACKSLASH    &kp KP_SLASH     &trans               &trans               &trans                   &trans
                                                                       &trans              &trans                  &trans           &trans
@@ -340,3 +340,4 @@
         };
     };
 };
+т
