@@ -35,7 +35,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <300>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <100>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
 
@@ -48,7 +48,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <300>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <100>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
 
@@ -289,11 +289,11 @@
             bindings = <
 &kp ESCAPE  &trans     &trans        &trans        &trans             &kp INS  &kp HOME  &kp UP_ARROW  &kp END    &kp PAGE_UP
 &kp LSHIFT  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &default_report    &kp DEL  &kp LEFT  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN
-&trans      &trans     &trans        &trans        &bootloader        &trans   &trans    &trans        &trans     &trans
+&trans      &trans     &trans        &trans        &bootloader        &kp F19  &trans    &trans        &trans     &trans
                                      &trans        &trans             &trans   &trans
             >;
         };
-
+tststtstrstrrs
         tri_layer {
             bindings = <
 &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG    &trans     &kp C_MUTE         &trans
@@ -314,9 +314,9 @@
 
         numbers_symbols_kz {
             bindings = <
-&kp GRAVE                 &kp KP_N1               &kp KP_N2           &kp KP_N3           &kp GRAVE               &kp N1           &kp KP_SUBTRACT      &kp KP_PLUS          &kp LS(NUMBER_6)         &kp AMPERSAND
+&kp GRAVE                 &kp KP_N1               &kp KP_N2           &kp KP_N3           &trans                  &kp N1           &kp KP_SUBTRACT      &kp KP_PLUS          &kp KP_EQUAL         &kp AMPERSAND
 &ht LEFT_SHIFT LS(GRAVE)  &ht LEFT_CONTROL KP_N4  &ht LEFT_GUI KP_N5  &ht LEFT_ALT KP_N6  &kp KP_N0               &kp KP_MULTIPLY  &rht LEFT_ALT KP_N7  &rht LEFT_GUI KP_N8  &rht LEFT_CONTROL KP_N9  &rht LEFT_SHIFT SEMICOLON
-&trans                    &kp LESS_THAN           &kp LEFT_BRACE      &kp LEFT_BRACKET    &kp NON_US_BACKSLASH    &kp SLASH        &kp RIGHT_BRACKET    &kp RIGHT_BRACE      &kp GREATER_THAN         &trans
+&trans                    &trans                  &trans              &trans              &kp NON_US_BACKSLASH    &kp KP_SLASH     &trans      &trans       &trans         &trans
                                                                       &trans              &trans                  &trans           &trans
             >;
         };
