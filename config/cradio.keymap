@@ -216,7 +216,7 @@
         };
 
         kz_iy {
-            bindings = <&kp Q>;
+            bindings = <&kp B>;
             key-positions = <24 13>;
             layers = <5>;
         };
