@@ -215,9 +215,9 @@
             layers = <5>;
         };
 
-        kz_iy {
-            bindings = <&kp B>;
-            key-positions = <24 13>;
+        kz_g {
+            bindings = <&kp U>;
+            key-positions = <12 13>;
             layers = <5>;
         };
 
@@ -312,9 +312,9 @@
 
         kazakh {
             bindings = <
-&kp N8        &kp N9       &kp E      &kp R      &kp T    &kp Y &kp N4       &kp I       &kp SEMICOLON        &kp P
+&kp Q        &kp N9       &kp E      &kp R      &kp T    &kp Y &kp N4       &kp I       &kp SEMICOLON        &kp P
 &ht LSHIFT N0 &ht LCTRL S &ht LGUI N5 &ht LALT F &kp G    &kp H &rht LALT J &rht RGUI K &rht LCTRL N3 &rht LSHIFT L
-&kp MINUS        &kp N2       &kp C      &kp V      &kp Q    &kp N &kp U       &kp COMMA       &kp LEFT_BRACKET        &trans
+&kp MINUS        &kp N2       &kp C      &kp V      &kp B    &kp N &kp N8       &kp COMMA       &kp LEFT_BRACKET        &trans
                                                   &trans          &lt 6 SPACE    &lt 7 TAB  &kp BACKSPACE
             >;
         };
