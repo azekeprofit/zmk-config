@@ -312,9 +312,9 @@
 
         kazakh {
             bindings = <
-&kp N8        &kp N9       &kp e      &kp r      &kp t    &kp y &kp l       &kp i       &kp u        &kp p
-&ht LSHIFT N0 &ht LCTRL s &ht LGUI N5 &ht LALT f &kp g    &kp h &rht LALT j &rht RGUI k &rht LCTRL N3 &rht LSHIFT N4
-&kp MINUS        &kp LEFT_BRACKET       &kp c      &kp v      &kp q    &kp n &kp SEMICOLON       &kp COMMA       &kp N2        &trans
+&kp N8        &kp N9       &kp E      &kp R      &kp T    &kp Y &kp L       &kp I       &kp U        &kp P
+&ht LSHIFT N0 &ht LCTRL S &ht LGUI N5 &ht LALT F &kp G    &kp H &rht LALT J &rht RGUI K &rht LCTRL N3 &rht LSHIFT N4
+&kp MINUS        &kp LEFT_BRACKET       &kp C      &kp V      &kp B    &kp N &kp SEMICOLON       &kp COMMA       &kp N2        &trans
                                                   &trans          &lt 6 SPACE    &lt 7 TAB  &kp BACKSPACE
             >;
         };
