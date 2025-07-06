@@ -287,9 +287,9 @@
 
         qwerty-hangul {
             bindings = <
-&trans  &kp W        &kp E       &kp R           &kp T     &kp Y   &kp U            &kp I        &kp O           &kp P
-&trans  &ht LCTRL S  &ht LGUI D  &ht LEFT_ALT F  &kp G     &kp H   &rht LEFT_ALT J  &rht RGUI K  &ctrl_hold 9 L  &rht LEFT_SHIFT SEMICOLON
-&kp Z   &kp X        &kp C       &kp V           &kp B     &kp N   &kp M            &trans       &trans          &trans
+&trans  &kp W        &kp E       &kp R           &kp T     &kp Y   &kp U            &kp I        &kp O    &kp P
+&trans  &ht LCTRL S  &ht LGUI D  &ht LEFT_ALT F  &kp G     &kp H   &rht LEFT_ALT J  &rht RGUI K  &lt 9 L  &rht LEFT_SHIFT SEMICOLON
+&kp Z   &kp X        &kp C       &kp V           &kp B     &kp N   &kp M            &trans       &trans   &trans
                                  &trans          &trans    &trans  &trans
             >;
         };
