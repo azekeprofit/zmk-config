@@ -54,6 +54,18 @@
 
             hold-trigger-key-positions = <0 1 2 3 4 14 24 23 13 12 22 21 11 10 20 30 19 18 17 16 31>;
         };
+
+        ctrl_hold: ctrl_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CTRL_HOLD";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            hold-trigger-key-positions = <5 7 8 9 6 15 16 18 19 17 27 28 29 26 25 33 10 11 12 13 32>;
+            bindings = <&lt>, <&kp>;
+        };
     };
 
     conditional_layers {
@@ -259,13 +271,6 @@
             bindings = <&macro_param_1to1 &to MACRO_PLACEHOLDER &kp LC(LS(NUMBER_3)) &kp LANG_HANGEUL>;
             label = "han";
         };
-
-        mouseless: mouseless {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp F19 &sl 9>;
-            label = "MOUSELESS";
-        };
     };
 
     keymap {
@@ -282,9 +287,9 @@
 
         qwerty-hangul {
             bindings = <
-&trans  &kp W        &kp E       &kp R           &kp T     &kp Y   &kp U            &kp I        &kp O                &kp P
-&trans  &ht LCTRL S  &ht LGUI D  &ht LEFT_ALT F  &kp G     &kp H   &rht LEFT_ALT J  &rht RGUI K  &rht LEFT_CONTROL L  &rht LEFT_SHIFT SEMICOLON
-&kp Z   &kp X        &kp C       &kp V           &kp B     &kp N   &kp M            &trans       &trans               &trans
+&trans  &kp W        &kp E       &kp R           &kp T     &kp Y   &kp U            &kp I        &kp O           &kp P
+&trans  &ht LCTRL S  &ht LGUI D  &ht LEFT_ALT F  &kp G     &kp H   &rht LEFT_ALT J  &rht RGUI K  &ctrl_hold 9 L  &rht LEFT_SHIFT SEMICOLON
+&kp Z   &kp X        &kp C       &kp V           &kp B     &kp N   &kp M            &trans       &trans          &trans
                                  &trans          &trans    &trans  &trans
             >;
         };
@@ -318,10 +323,10 @@
 
         kazakh {
             bindings = <
-&kp Q        &kp N9       &kp E      &kp R      &kp T    &kp SEMICOLON &kp N4       &kp I       &kp N8        &kp P
-&ht LSHIFT N0 &ht LCTRL S &ht LGUI N5 &ht LALT F &kp G    &kp H &rht LALT J &rht RGUI K &rht LCTRL N3 &rht LSHIFT Y
-&kp MINUS        &kp N2       &kp C      &kp V      &kp B    &kp N &kp L       &kp COMMA       &kp LEFT_BRACKET        &trans
-                                                  &trans          &lt 6 SPACE    &lt 7 TAB  &kp BACKSPACE
+&kp Q          &kp N9       &kp E        &kp R       &kp T          &kp SEMICOLON  &kp N4         &kp I        &kp N8            &kp P
+&ht LSHIFT N0  &ht LCTRL S  &ht LGUI N5  &ht LALT F  &kp G          &kp H          &rht LALT J    &rht RGUI K  &rht LCTRL N3     &rht LSHIFT Y
+&kp MINUS      &kp N2       &kp C        &kp V       &kp B          &kp N          &kp L          &kp COMMA    &kp LEFT_BRACKET  &trans
+                                         &trans      &lt 6 SPACE    &lt 7 TAB      &kp BACKSPACE
             >;
         };
 
@@ -352,12 +357,12 @@
             >;
         };
 
-        colemak_sticky_mouseless {
+        ctrl {
             bindings = <
-&kp Q  &kp W  &kp F  &kp P                  &kp B          &kp J      &kp L             &kp U         &kp Y         &kp SEMICOLON
-&kp A  &kp R  &kp S  &kp T                  &kp G          &kp K      &rht RIGHT_ALT N  &rht RMETA E  &rht RCTRL I  &rht RIGHT_SHIFT O
-&kp Z  &kp X  &kp C  &kp D                  &kp V          &kp M      &kp H             &kp COMMA     &kp DOT       &kp ENTER
-                     &ht LEFT_SHIFT ESCAPE  &lt 2 SPACE    &lt 3 TAB  &kp BACKSPACE
+&kp LC(Q)  &kp LC(W)  &kp LC(F)  &kp LC(P)  &kp LC(B)    &kp LC(J)  &kp LC(L)  &kp LC(U)      &kp LC(Y)    &kp LC(SEMI)
+&kp LC(A)  &kp LC(R)  &kp LC(S)  &kp LC(T)  &kp LC(G)    &kp LC(K)  &kp LC(N)  &kp LC(E)      &kp LC(I)    &kp LC(O)
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(D)  &kp LC(V)    &kp LC(M)  &kp LC(H)  &kp LC(COMMA)  &kp LC(DOT)  &trans
+                                 &trans     &trans       &trans     &trans
             >;
         };
     };
