@@ -287,10 +287,10 @@
 
         qwerty-hangul {
             bindings = <
-&trans  &kp W        &kp E       &kp R           &kp T     &kp Y   &kp U            &kp I        &kp O    &kp P
-&trans  &ht LCTRL S  &ht LGUI D  &ht LEFT_ALT F  &kp G     &kp H   &rht LEFT_ALT J  &rht RGUI K  &lt 9 L  &rht LEFT_SHIFT SEMICOLON
-&kp Z   &kp X        &kp C       &kp V           &kp B     &kp N   &kp M            &trans       &trans   &trans
-                                 &trans          &trans    &trans  &trans
+&trans  &kp W    &kp E       &kp R           &kp T     &kp Y   &kp U            &kp I        &kp O    &kp P
+&trans  &lt 9 S  &ht LGUI D  &ht LEFT_ALT F  &kp G     &kp H   &rht LEFT_ALT J  &rht RGUI K  &lt 9 L  &rht LEFT_SHIFT SEMICOLON
+&kp Z   &kp X    &kp C       &kp V           &kp B     &kp N   &kp M            &trans       &trans   &trans
+                             &trans          &trans    &trans  &trans
             >;
         };
 
@@ -323,10 +323,10 @@
 
         kazakh {
             bindings = <
-&kp Q          &kp N9       &kp E        &kp R       &kp T          &kp SEMICOLON  &kp N4         &kp I        &kp N8            &kp P
-&ht LSHIFT N0  &ht LCTRL S  &ht LGUI N5  &ht LALT F  &kp G          &kp H          &rht LALT J    &rht RGUI K  &rht LCTRL N3     &rht LSHIFT Y
-&kp MINUS      &kp N2       &kp C        &kp V       &kp B          &kp N          &kp L          &kp COMMA    &kp LEFT_BRACKET  &trans
-                                         &trans      &lt 6 SPACE    &lt 7 TAB      &kp BACKSPACE
+&kp Q          &kp N9   &kp E        &kp R       &kp T          &kp SEMICOLON  &kp N4         &kp I        &kp N8            &kp P
+&ht LSHIFT N0  &lt 9 S  &ht LGUI N5  &ht LALT F  &kp G          &kp H          &rht LALT J    &rht RGUI K  &lt 9 N3          &rht LSHIFT Y
+&kp MINUS      &kp N2   &kp C        &kp V       &kp B          &kp N          &kp L          &kp COMMA    &kp LEFT_BRACKET  &trans
+                                     &trans      &lt 6 SPACE    &lt 7 TAB      &kp BACKSPACE
             >;
         };
 
