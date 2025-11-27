@@ -256,6 +256,11 @@
             key-positions = <5 6 7>;
             layers = <10>;
         };
+
+        mouseless {
+            bindings = <&kp F13>;
+            key-positions = <13 16>;
+        };
     };
 
     macros {
@@ -372,7 +377,7 @@
 &trans  &kp W    &kp E       &kp R           &kp T     &kp Y   &kp U            &kp I        &kp O    &kp P
 &trans  &lt 9 S  &ht LGUI D  &ht LEFT_ALT F  &kp G     &kp H   &rht LEFT_ALT J  &rht RGUI K  &lt 9 L  &rht LEFT_SHIFT SEMICOLON
 &kp Z   &kp X    &kp C       &kp V           &kp B     &kp N   &kp M            &trans       &trans   &trans
-                             &trans          &trans    &trans  &trans
+                             &ht LEFT_SHIFT ESCAPE  &lt 2 SPACE    &lt 3 TAB  &kp BACKSPACE
             >;
         };
     };
