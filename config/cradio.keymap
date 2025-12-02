@@ -111,17 +111,17 @@
         };
 
         ru {
-            bindings = <&ruen 1 LC(LS(NUMBER_2))>;
+            bindings = <&ruen 1 F15>;
             key-positions = <9 17>;
         };
 
         kaz {
-            bindings = <&ruen 5 LC(LS(NUMBER_4))>;
+            bindings = <&ruen 5 F16>;
             key-positions = <17 25>;
         };
 
         en {
-            bindings = <&ruen 0 LC(LS(NUMBER_3))>;
+            bindings = <&ruen 0 F14>;
             key-positions = <9 16>;
         };
 
