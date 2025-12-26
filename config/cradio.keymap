@@ -264,7 +264,7 @@
 
         monitor-off {
             bindings = <&kp F17>;
-            key-positions = <18 16 23>;
+            key-positions = <29 20>;
         };
     };
 
