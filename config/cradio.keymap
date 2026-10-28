@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/pointing.h>
 
 #define MAC 0
 #define WIN 1
@@ -317,18 +316,18 @@
 
         navigation {
             bindings = <
-&kp ESCAPE  &trans     &trans        &trans        &trans             &kp INS   &kp HOME  &kp UP_ARROW  &kp END    &kp PAGE_UP
-&kp LSHIFT  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &default_report    &kp DEL   &kp LEFT  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN
-&mkp MB1    &trans     &trans        &trans        &bootloader        &mkp MB1  &trans    &trans        &mkp MCLK  &mkp MB2
-                                     &trans        &trans             &trans    &trans
+&kp ESCAPE  &trans     &trans        &trans        &trans             &kp INS  &kp HOME  &kp UP_ARROW  &kp END    &kp PAGE_UP
+&kp LSHIFT  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &default_report    &kp DEL  &kp LEFT  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN
+&trans      &trans     &trans        &trans        &bootloader        &trans   &trans    &trans        &trans     &trans
+                                     &trans        &trans             &trans   &trans
             >;
         };
 
         tri_layer {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG    &trans     &kp C_MUTE         &trans
-&kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp LEFT_ALT    &kp RMETA  &kp RIGHT_CONTROL  &kp RSHIFT
-&kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &studio_unlock  &trans     &trans             &bt BT_CLR_ALL
+&kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG    &kp KP_NUMLOCK  &kp C_MUTE         &trans
+&kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp LEFT_ALT    &kp RMETA       &kp RIGHT_CONTROL  &kp RSHIFT
+&kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &studio_unlock  &trans          &trans             &bt BT_CLR_ALL
                           &trans   &trans          &trans        &trans
             >;
         };
@@ -362,9 +361,9 @@
 
         tri_layer_kz {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG    &trans     &kp C_MUTE         &trans
-&kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp LEFT_ALT    &kp RMETA  &kp RIGHT_CONTROL  &kp RSHIFT
-&kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &studio_unlock  &trans     &trans             &bt BT_CLR_ALL
+&kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG    &kp KP_NUMLOCK  &kp C_MUTE         &trans
+&kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp LEFT_ALT    &kp RMETA       &kp RIGHT_CONTROL  &kp RSHIFT
+&kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &studio_unlock  &trans          &trans             &bt BT_CLR_ALL
                           &trans   &trans          &trans        &trans
             >;
         };
